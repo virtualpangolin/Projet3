@@ -25,14 +25,43 @@ ol {
 /* -- components/ est utilisé pour ranger les blocs BEM qui sont plus indépendants, comme les boutons -- */
 /* -- layouts/ est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable, 
 par exemple un header pour les mises en page de grande taille ou un footer -- */
+/* -- -- -- -- Grid Restaurants -- -- -- -- */
+.restos h2 {
+  grid-area: title;
+}
+
+#cardR1 {
+  grid-area: cardR1;
+}
+
+#cardR2 {
+  grid-area: cardR2;
+}
+
+#cardR3 {
+  grid-area: cardR3;
+}
+
+#cardR4 {
+  grid-area: cardR4;
+}
+
+.restos {
+  display: grid;
+  grid-gap: 18px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "title" "cardR1" "cardR2" "cardR3" "cardR4";
+  background-color: #f7f7f7;
+}
+
 /* -- layouts/ est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable, 
 par exemple un header pour les mises en page de grande taille ou un footer -- */
 /* -- pages/ contient les blocs de code qui ne s’appliquent qu’à une seule page. 
 Vous utilisez des boutons dans tout votre site, en revanche votre page d’accueil 
 comporte une section Citation et une grille de projets qui ne sont employés nulle part ailleurs. 
 En d’autres termes, pages/ contient des règles spécifiques à une seule page qui ne seront pas réutilisées ailleurs -- */
-/* -- -- -- Header -- -- -- */
-/* -- Logo -- */
+/* -- -- -- -- Header -- -- -- -- */
+/* -- -- -- -- Logo -- -- -- -- */
 .ohmyfood {
   display: flex;
   justify-content: center;
@@ -44,18 +73,19 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
   /*max-width: 45%;*/
 }
 
-/* -- Location -- */
+/* -- -- -- -- Location -- -- -- -- */
 .location {
-  display: flex;
-  justify-content: center;
   padding: 15px 50px 15px 50px;
   background-color: #ededed;
 }
-.location__icon-map {
-  font-size: 0.8em;
+
+.location i {
+  font-size: 1em;
   background-color: chocolate;
+  margin-right: 20px;
 }
-/* -- Titles -- */
+
+/* -- -- -- -- Titles -- -- -- -- */
 .intro {
   display: flex;
   flex-direction: column;
@@ -67,25 +97,180 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
   padding: 35px 35px 12px;
 }
 
-.subtitle {
+.intro__subtitle {
   font-size: 1.1em;
   padding: 0 27px 0;
   font-weight: normal;
 }
 
-.explore {
+.intro__explore {
   display: flex;
   align-items: center;
-  margin: 35px auto 60px;
   border-radius: 25px;
-  background: linear-gradient(45deg, #FF79DA, #9356DC);
+  background: linear-gradient(#FF79DA, #9356DC);
+  margin: 35px auto 60px;
   padding-left: 20px;
   padding-right: 20px;
   height: 47px;
+  color: #fff;
   cursor: pointer;
 }
-.explore span {
+
+/* -- -- -- -- Main -- -- -- -- */
+/* -- -- -- -- Fonctionnement -- -- -- -- */
+.fonction h2 {
+  font-size: 1.5em;
+  margin-top: 48px;
+  margin-left: 18px;
+  margin-bottom: 28px;
+}
+
+.fonction ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 28px;
+  padding-right: 18px;
+}
+.fonction ol li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 25px;
+  box-shadow: 1px 2px 8px #cccccc;
+  margin: 0 0 28px;
+  height: 70px;
+  width: 100%;
+  max-width: 340px;
+  position: relative;
+}
+.fonction ol li:hover {
+  cursor: pointer;
+  background: rgba(147, 86, 220, 0.1);
+}
+.fonction ol li:hover i {
+  color: #9356DC;
+  left: 30px;
+  position: absolute;
+}
+
+.fonction__number {
+  left: -12px;
   color: #fff;
+  background-color: #9356DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 23px;
+  width: 23px;
+  font-size: 0.8em;
+  border-radius: 20px;
+  position: absolute;
+}
+
+.fonction__text {
+  font-weight: bold;
+  position: relative;
+}
+
+.fonction i {
+  color: #878787;
+  position: absolute;
+  left: 30px;
+}
+
+.fa-mobile-alt {
+  font-size: 1.2em;
+}
+
+.fa-list-ul {
+  font-size: 1.1em;
+}
+
+.fa-store {
+  font-size: 1em;
+}
+
+/* -- -- -- -- Restaurants -- -- -- -- */
+.restos {
+  padding: 50px 20px 65px;
+  margin-top: 33px;
+}
+
+.restos h2 {
+  font-size: 1.6em;
+}
+
+.restos a {
+  text-decoration: none;
+  color: black;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 175px;
+  max-width: 340px;
+  border-radius: 15px 15px 0 0;
+}
+
+.card {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 250px;
+  max-width: 340px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.card__new {
+  font-size: 13px;
+  font-weight: bold;
+  top: 14px;
+  bottom: 50px;
+  right: 11px;
+  background-color: #99E2D0;
+  color: #009973;
+  margin-bottom: 158px;
+  padding-top: 6px;
+  padding-right: 11px;
+  padding-left: 11px;
+  position: absolute;
+}
+
+/* -- -- -- -- Footer -- -- -- -- */
+.footer {
+  background-color: #3b3b3b;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-bottom: 35px;
+}
+
+.footer__title {
+  font-family: "Shrikhand", cursive;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.footer__list {
+  margin-top: 7px;
+}
+
+.footer__link {
+  color: #fff;
+}
+
+.footer .fa-utensils {
+  font-size: 0.8em;
+  margin-right: 13px;
+}
+
+.footer .fa-hands-helping {
+  font-size: 0.6em;
+  margin-right: 11px;
 }
 
 /*# sourceMappingURL=style.css.map */
