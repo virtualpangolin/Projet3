@@ -1,3 +1,91 @@
+@charset "UTF-8";
+/* -- le directory base/ contient les fichiers qui définissent les fondations de votre site,
+ par exemple la police de caractères et les normes que vous voulez appliquer sur tout votre site, 
+ telles que le box-sizing -- */
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+ol {
+  list-style: none;
+}
+
+/* -- components/ est utilisé pour ranger les blocs BEM qui sont plus indépendants, comme les boutons -- */
+/* -- layouts/ est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable, 
+par exemple un header pour les mises en page de grande taille ou un footer -- */
+/* -- layouts/ est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable, 
+par exemple un header pour les mises en page de grande taille ou un footer -- */
+/* -- pages/ contient les blocs de code qui ne s’appliquent qu’à une seule page. 
+Vous utilisez des boutons dans tout votre site, en revanche votre page d’accueil 
+comporte une section Citation et une grille de projets qui ne sont employés nulle part ailleurs. 
+En d’autres termes, pages/ contient des règles spécifiques à une seule page qui ne seront pas réutilisées ailleurs -- */
+/* -- -- -- Header -- -- -- */
+/* -- Logo -- */
+.ohmyfood {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 12px;
+  padding-top: 25px;
+}
+.ohmyfood__logo {
+  width: 168px;
+  /*max-width: 45%;*/
+}
+
+/* -- Location -- */
+.location {
+  display: flex;
+  justify-content: center;
+  padding: 15px 50px 15px 50px;
+  background-color: #ededed;
+}
+.location__icon-map {
+  font-size: 0.8em;
+  background-color: chocolate;
+}
+/* -- Titles -- */
+.intro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+.intro__title {
+  font-size: 1.6em;
+  padding: 35px 35px 12px;
+}
+
+.subtitle {
+  font-size: 1.1em;
+  padding: 0 27px 0;
+  font-weight: normal;
+}
+
+.explore {
+  display: flex;
+  align-items: center;
+  margin: 35px auto 60px;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #FF79DA, #9356DC);
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 47px;
+  cursor: pointer;
+}
+.explore span {
+  color: #fff;
+}
 
 /*# sourceMappingURL=style.css.map */
