@@ -22,7 +22,21 @@ ol {
   list-style: none;
 }
 
+/* -- -- -- -- Wrapper -- -- -- -- */
 /* -- components/ est utilisé pour ranger les blocs BEM qui sont plus indépendants, comme les boutons -- */
+.btn-purple {
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  margin: 35px auto 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 47px;
+  color: #fff;
+  cursor: pointer;
+}
+
 /* -- layouts/ est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable, 
 par exemple un header pour les mises en page de grande taille ou un footer -- */
 /* -- -- -- -- Grid Restaurants -- -- -- -- */
@@ -56,6 +70,38 @@ par exemple un header pour les mises en page de grande taille ou un footer -- */
 
 /* -- layouts/ est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable, 
 par exemple un header pour les mises en page de grande taille ou un footer -- */
+/* -- -- -- -- Footer -- -- -- -- */
+.footer {
+  background-color: #3b3b3b;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-bottom: 35px;
+}
+
+.footer__title {
+  font-family: "Shrikhand", cursive;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.footer__list {
+  margin-top: 7px;
+}
+
+.footer__link {
+  color: #fff;
+}
+
+.footer .fa-utensils {
+  font-size: 0.8em;
+  margin-right: 13px;
+}
+
+.footer .fa-hands-helping {
+  font-size: 0.6em;
+  margin-right: 11px;
+}
+
 /* -- pages/ contient les blocs de code qui ne s’appliquent qu’à une seule page. 
 Vous utilisez des boutons dans tout votre site, en revanche votre page d’accueil 
 comporte une section Citation et une grille de projets qui ne sont employés nulle part ailleurs. 
@@ -70,19 +116,24 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
 }
 .ohmyfood__logo {
   width: 168px;
-  /*max-width: 45%;*/
 }
 
 /* -- -- -- -- Location -- -- -- -- */
 .location {
-  padding: 15px 50px 15px 50px;
+  display: flex;
+  justify-content: center;
+  padding: 15px 35px 15px 0;
   background-color: #ededed;
 }
 
 .location i {
-  font-size: 1em;
-  background-color: chocolate;
-  margin-right: 20px;
+  font-size: 1.1em;
+  margin-top: 2px;
+  margin-right: 17px;
+}
+
+.intro__searchText {
+  font-weight: bold;
 }
 
 /* -- -- -- -- Titles -- -- -- -- */
@@ -101,19 +152,6 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
   font-size: 1.1em;
   padding: 0 27px 0;
   font-weight: normal;
-}
-
-.intro__explore {
-  display: flex;
-  align-items: center;
-  border-radius: 25px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  margin: 35px auto 60px;
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 47px;
-  color: #fff;
-  cursor: pointer;
 }
 
 /* -- -- -- -- Main -- -- -- -- */
@@ -152,12 +190,11 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
 }
 .fonction ol li:hover i {
   color: #9356DC;
-  left: 30px;
   position: absolute;
+  left: 30px;
 }
 
 .fonction__number {
-  left: -12px;
   color: #fff;
   background-color: #9356DC;
   display: flex;
@@ -168,6 +205,7 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
   font-size: 0.8em;
   border-radius: 20px;
   position: absolute;
+  left: -12px;
 }
 
 .fonction__text {
@@ -205,7 +243,15 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
 
 .restos a {
   text-decoration: none;
-  color: black;
+  color: #000;
+}
+
+.card {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+  position: relative;
 }
 
 .card img {
@@ -213,17 +259,34 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
   width: 100%;
   height: 100%;
   max-height: 175px;
-  max-width: 340px;
   border-radius: 15px 15px 0 0;
 }
 
-.card {
-  background-color: #FFFFFF;
+.card__flex {
+  height: 21%;
   width: 100%;
-  height: 250px;
-  max-width: 340px;
-  border-radius: 15px;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-left: 12px;
+}
+.card__info p {
+  padding-top: 5px;
+}
+
+.card__icon-heart {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22%;
+  padding-top: 10px;
 }
 
 .card__new {
@@ -241,36 +304,92 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
   position: absolute;
 }
 
-/* -- -- -- -- Footer -- -- -- -- */
-.footer {
-  background-color: #3b3b3b;
+/* -- -- -- -- Header -- -- -- -- */
+/* -- -- -- -- Logo -- -- -- -- */
+header {
+  display: flex;
+}
+
+.ohmyfood {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 12px;
   padding-top: 25px;
-  padding-left: 25px;
-  padding-bottom: 35px;
+}
+.ohmyfood__logo {
+  width: 168px;
 }
 
-.footer__title {
+/* -- -- -- -- Main -- -- -- -- */
+.welcome-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+
+/* -- -- -- -- Section -- -- -- -- */
+/* -- -- -- -- Menu -- -- -- -- */
+section {
+  margin-top: -55px;
+  background-color: #f2f2f2;
+}
+
+.page-title__name {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: blueviolet;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 35px 35px 0 0;
+  background-color: #f2f2f2;
+}
+
+.page-title__name h1 {
+  font-size: 1.7em;
   font-family: "Shrikhand", cursive;
-  color: #fff;
-  margin-bottom: 16px;
+  padding-left: 20px;
 }
 
-.footer__list {
-  margin-top: 7px;
+.page-title__name i {
+  font-size: 1.5em;
+  padding-right: 35px;
 }
 
-.footer__link {
-  color: #fff;
+.menu {
+  padding: 0 13px;
 }
 
-.footer .fa-utensils {
-  font-size: 0.8em;
-  margin-right: 13px;
+.menu__content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17px;
+  background-color: #fff;
+  border-radius: 15px;
+  height: 68px;
+  cursor: pointer;
 }
 
-.footer .fa-hands-helping {
-  font-size: 0.6em;
-  margin-right: 11px;
+.menu__description {
+  padding-top: 13px;
+  padding-left: 10px;
+}
+
+.menu__description h3 {
+  font-size: 1.1em;
+}
+
+.menu__description p {
+  font-size: 0.9em;
+  padding-top: 2px;
+}
+
+.menu__price {
+  display: flex;
+  align-self: flex-end;
+  font-weight: bold;
+  padding-right: 23px;
+  padding-bottom: 13px;
 }
 
 /*# sourceMappingURL=style.css.map */

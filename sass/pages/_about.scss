@@ -14,25 +14,27 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
     padding-top: 25px;
         &__logo{
             width: 168px;
-            /*max-width: 45%;*/
         }
     }
 
 /* -- -- -- -- Location -- -- -- -- */
 
 .location{
-    padding: 15px 50px 15px 50px;
+    display: flex;
+    justify-content: center;
+    padding: 15px 35px 15px 0;
     background-color: #ededed;
 }
+
 .location i{
-            font-size: 1em;
-            background-color: chocolate;
-            margin-right: 20px;
+    font-size: 1.1em;
+    margin-top: 2px;
+    margin-right: 17px;
         }
 
 .intro__searchText{
+    font-weight: bold;
 }
-
 
 /* -- -- -- -- Titles -- -- -- -- */
 
@@ -51,19 +53,6 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
             font-size: 1.1em;
             padding: 0 27px 0;
             font-weight: normal;
-}
-
-.intro__explore{
-    display: flex;
-    align-items: center;
-    border-radius: 25px;
-    background: linear-gradient($color-secondary, $color-primary);
-    margin: 35px auto 60px;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 47px;
-    color: #fff;
-    cursor: pointer;
 }
 
 /* -- -- -- -- Main -- -- -- -- */
@@ -101,15 +90,14 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
                     background:rgba(147, 86, 220, 0.1);
                         i{
                             color: $color-primary;
-                            left: 30px;
                             position: absolute;
+                            left: 30px;
                         }
                     }
                 }
             }
 
 .fonction__number{
-    left: -12px;
     color: #fff;
     background-color: $color-primary;
     display: flex;
@@ -120,6 +108,7 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
     font-size: 0.8em;
     border-radius: 20px;
     position: absolute;
+    left: -12px;
 }
 
 .fonction__text{
@@ -158,7 +147,15 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
 
 .restos a{
     text-decoration: none;
-    color: black;
+    color: #000;
+}
+
+.card{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    position: relative;
 }
 
 .card img{
@@ -166,17 +163,34 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
     width: 100%;
     height: 100%;
     max-height: 175px;
-    max-width: 340px;
     border-radius: 15px 15px 0 0;
 }
 
-.card{
-    background-color: #FFFFFF;
+.card__flex{
+    height: 21%;
     width: 100%;
-    height: 250px;
-    max-width: 340px;
-    border-radius: 15px;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-left: 12px;
+        & p{
+            padding-top: 5px;
+        }
+    }
+
+.card__icon-heart{
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22%;
+    padding-top: 10px;
 }
 
 .card__new{
@@ -185,44 +199,11 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
     top: 14px;
     bottom: 50px;
     right: 11px;
-    background-color: #99E2D0;
+    background-color: $color-tertiary;
     color: #009973;
     margin-bottom: 158px;
     padding-top: 6px;
     padding-right: 11px;
     padding-left: 11px;
     position: absolute;
-}
-
-/* -- -- -- -- Footer -- -- -- -- */
-
-.footer{
-    background-color: #3b3b3b;
-    padding-top: 25px;
-    padding-left: 25px;
-    padding-bottom: 35px;
-}
-
-.footer__title{
-    font-family: 'Shrikhand', cursive;
-    color: #fff;
-    margin-bottom: 16px;
-}
-
-.footer__list{
-    margin-top: 7px;
-}
-
-.footer__link{
-    color: #fff;
-}
-
-.footer .fa-utensils{
-    font-size: 0.8em;
-    margin-right: 13px;
-}
-
-.footer .fa-hands-helping{
-    font-size: 0.6em;
-    margin-right: 11px;
 }

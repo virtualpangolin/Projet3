@@ -1,1 +1,14 @@
 /* -- components/ est utilisé pour ranger les blocs BEM qui sont plus indépendants, comme les boutons -- */
+
+.btn-purple{
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    background: linear-gradient($color-secondary, $color-primary);
+    margin: 35px auto 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 47px;
+    color: #fff;
+    cursor: pointer;
+}

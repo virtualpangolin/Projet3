@@ -1,0 +1,91 @@
+/* -- -- -- -- Header -- -- -- -- */
+
+/* -- -- -- -- Logo -- -- -- -- */
+header{
+    display: flex;
+}
+.ohmyfood{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 12px;
+    padding-top: 25px;
+        &__logo{
+            width: 168px;
+        }
+    }
+
+/* -- -- -- -- Main -- -- -- -- */
+
+.welcome-img img{
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+}
+
+/* -- -- -- -- Section -- -- -- -- */
+
+/* -- -- -- -- Menu -- -- -- -- */
+
+section{
+    margin-top: -55px;
+    background-color: #f2f2f2;
+}
+
+.page-title__name{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: blueviolet;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 35px 35px 0 0;
+    background-color: #f2f2f2;
+}
+
+.page-title__name h1{
+    font-size: 1.7em;
+    font-family: 'Shrikhand', cursive;
+    padding-left: 20px;
+
+}
+
+.page-title__name i{
+    font-size: 1.5em;
+    padding-right: 35px;
+}
+
+.menu{
+    padding: 0 13px;
+}
+
+.menu__content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+    background-color: #fff;
+    border-radius: 15px;
+    height: 68px;
+    cursor: pointer;
+}
+
+.menu__description{
+    padding-top: 13px;
+    padding-left: 10px;
+}
+
+.menu__description h3{
+    font-size: 1.1em;
+}
+
+.menu__description p{
+    font-size: 0.9em;
+    padding-top: 2px;
+}
+
+.menu__price{
+    display: flex;
+    align-self: flex-end;
+    font-weight: bold;
+    padding-right: 23px;
+    padding-bottom: 13px;
+}
