@@ -1,35 +1,25 @@
-/* -- layouts/ est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable, 
-par exemple un header pour les mises en page de grande taille ou un footer -- */
-
-/* -- -- -- -- Footer -- -- -- -- */
-
 .footer{
     background-color: #3b3b3b;
     padding-top: 25px;
-    padding-left: 25px;
     padding-bottom: 35px;
-}
-
-.footer__title{
-    font-family: 'Shrikhand', cursive;
-    color: #fff;
-    margin-bottom: 16px;
-}
-
-.footer__list{
-    margin-top: 7px;
-}
-
-.footer__link{
-    color: #fff;
-}
-
-.footer .fa-utensils{
-    font-size: 0.8em;
-    margin-right: 13px;
-}
-
-.footer .fa-hands-helping{
-    font-size: 0.6em;
-    margin-right: 11px;
-}
+    padding-left: 25px;
+        &__title{
+        font-family: 'Shrikhand', cursive;
+        color: #fff;
+        margin-bottom: 16px;
+        }
+        &__list{
+            padding-top: 7px;
+        }
+        &__link{
+            color: #fff;
+        }
+        &__iconUtensils{
+            font-size: 0.8em;
+            padding-right: 13px;
+        }
+        &__iconHands{
+            font-size: 0.6em;
+            padding-right: 11px;
+        }
+    }

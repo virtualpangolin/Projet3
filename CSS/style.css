@@ -18,94 +18,305 @@ ul {
   list-style: none;
 }
 
-ol {
-  list-style: none;
-}
-
 /* -- -- -- -- Wrapper -- -- -- -- */
-/* -- components/ est utilisé pour ranger les blocs BEM qui sont plus indépendants, comme les boutons -- */
-.btn-purple {
+.btn__purple {
   display: flex;
+  justify-content: center;
   align-items: center;
-  border-radius: 25px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  margin: 35px auto 60px;
-  padding-left: 20px;
-  padding-right: 20px;
   height: 47px;
+  margin: 35px auto 60px;
+  padding-right: 20px;
+  padding-left: 20px;
   color: #fff;
+  border-style: none;
+  border-radius: 25px;
+  box-shadow: 1px 2px 8px #7d7d7d;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
   cursor: pointer;
+  transform: scale(1);
+  transition: transform 150ms, background-color 100ms 50ms;
+}
+.btn__purple:hover {
+  transform: scale(1.03);
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 1px 4px 10px #7d7d7d;
+  transition: transform 150ms;
+  opacity: 0.9;
 }
 
-/* -- layouts/ est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable, 
-par exemple un header pour les mises en page de grande taille ou un footer -- */
-/* -- -- -- -- Grid Restaurants -- -- -- -- */
-.restos h2 {
-  grid-area: title;
+.btn__purple--order {
+  width: 190px;
+  margin-top: 45px;
 }
 
-#cardR1 {
-  grid-area: cardR1;
-}
-
-#cardR2 {
-  grid-area: cardR2;
-}
-
-#cardR3 {
-  grid-area: cardR3;
-}
-
-#cardR4 {
-  grid-area: cardR4;
-}
-
-.restos {
-  display: grid;
-  grid-gap: 18px;
-  grid-template-columns: 1fr;
-  grid-template-areas: "title" "cardR1" "cardR2" "cardR3" "cardR4";
-  background-color: #f7f7f7;
-}
-
-/* -- layouts/ est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable, 
-par exemple un header pour les mises en page de grande taille ou un footer -- */
-/* -- -- -- -- Footer -- -- -- -- */
 .footer {
   background-color: #3b3b3b;
   padding-top: 25px;
-  padding-left: 25px;
   padding-bottom: 35px;
+  padding-left: 25px;
 }
-
 .footer__title {
   font-family: "Shrikhand", cursive;
   color: #fff;
   margin-bottom: 16px;
 }
-
 .footer__list {
-  margin-top: 7px;
+  padding-top: 7px;
 }
-
 .footer__link {
   color: #fff;
 }
-
-.footer .fa-utensils {
+.footer__iconUtensils {
   font-size: 0.8em;
-  margin-right: 13px;
+  padding-right: 13px;
 }
-
-.footer .fa-hands-helping {
+.footer__iconHands {
   font-size: 0.6em;
-  margin-right: 11px;
+  padding-right: 11px;
 }
 
-/* -- pages/ contient les blocs de code qui ne s’appliquent qu’à une seule page. 
-Vous utilisez des boutons dans tout votre site, en revanche votre page d’accueil 
-comporte une section Citation et une grille de projets qui ne sont employés nulle part ailleurs. 
-En d’autres termes, pages/ contient des règles spécifiques à une seule page qui ne seront pas réutilisées ailleurs -- */
+/* -- -- -- -- Header, logo, menu pages -- -- -- -- */
+.ohmyfood {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 12px;
+  position: relative;
+}
+.ohmyfood__logo {
+  width: 168px;
+}
+.ohmyfood i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: #000;
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+}
+
+/*.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.loader::after {
+    content: "";
+    width: 150px;
+    height: 150px;
+    border: 10px solid transparent;
+    border-radius: 50%;
+    animation: loading 2s ease-in-out infinite alternate,
+    color 2s ease-in-out infinite alternate;
+}
+
+@keyframes loading {
+    0%{
+        transform: rotate(-40deg);
+    }
+    100%{
+        transform: rotate(760deg);
+    }
+}
+
+@keyframes color{
+    100%, 0% {
+        border-top-color: $color-primary;
+    }
+    25% {
+        border-top-color: $color-secondary;
+    }
+    50% {
+        border-top-color: $color-tertiary;
+    }
+    75% {
+        border-top-color: $color-secondary;
+    }
+}*/
+/* -- -- -- -- Media queries Grid restaurants -- -- -- -- */
+@media all and (max-width: 720px) {
+  .section-restaurants .restaurants {
+    display: grid;
+    grid-gap: 18px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "cardR1" "cardR2" "cardR3" "cardR4";
+    background-color: #F7F7F7;
+  }
+}
+@media all and (min-width: 721px) and (max-width: 1024px) {
+  .section-restaurants .restaurants {
+    display: grid;
+    grid-gap: 18px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title title" "cardR1 cardR2" "cardR3 cardR4";
+    background-color: #F7F7F7;
+  }
+}
+@media all and (min-width: 1025px) and (max-width: 1300px) {
+  .section-restaurants .restaurants {
+    display: grid;
+    grid-gap: 18px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title title" "cardR1 cardR2" "cardR3 cardR4";
+    background-color: #F7F7F7;
+  }
+}
+@media all and (min-width: 1301px) {
+  .section-restaurants .restaurants {
+    display: grid;
+    grid-gap: 18px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "title title title title" "cardR1 cardR2 cardR3 cardR4";
+    background-color: #F7F7F7;
+  }
+}
+/* -- -- -- -- Media queries fonctionnement -- -- -- -- */
+@media all and (min-width: 1025px) and (max-width: 1300px) {
+  .fonction {
+    max-width: 1024px;
+    margin: auto;
+  }
+
+  .fonction h2 {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media all and (min-width: 1301px) {
+  .fonction {
+    max-width: 1300px;
+    margin: auto;
+  }
+
+  .fonction h2 {
+    display: flex;
+    justify-content: center;
+  }
+}
+/* -- -- -- -- Media queries header logo, text search -- -- -- -- */
+@media all and (min-width: 721px) and (max-width: 1024px) {
+  .header {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1024px;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+}
+/* -- -- -- -- Media queries header logo, text search -- -- -- -- */
+@media all and (min-width: 530px) and (max-width: 720px) {
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1024px;
+  }
+}
+@media all and (min-width: 721px) {
+  .footer {
+    height: 200px;
+  }
+
+  .footer__title {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    padding-right: 25px;
+    padding-bottom: 25px;
+  }
+
+  .footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-right: 25px;
+  }
+}
+/* -- -- -- -- Media queries menu list -- -- -- -- */
+@media all and (min-width: 721px) and (max-width: 1600px) {
+  .menu__starters {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .menu__main-course {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .menu__desserts {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .menu__content {
+    width: calc(100% - 100px);
+  }
+}
+.menu__content {
+  animation: menu__content 800ms 0.2ms;
+}
+
+@keyframes menu__content {
+  0% {
+    transform: translateY(100px) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+.anim-1 {
+  animation-delay: 0.1s;
+}
+
+.anim-2 {
+  animation-delay: 0.2s;
+}
+
+.anim-3 {
+  animation-delay: 0.3s;
+}
+
+.anim-4 {
+  animation-delay: 0.4s;
+}
+
+.anim-5 {
+  animation-delay: 0.5s;
+}
+
+.anim-6 {
+  animation-delay: 0.6s;
+}
+
+.anim-7 {
+  animation-delay: 0.7s;
+}
+
+.anim-8 {
+  animation-delay: 0.8s;
+}
+
+.anim-9 {
+  animation-delay: 0.9s;
+}
+
 /* -- -- -- -- Header -- -- -- -- */
 /* -- -- -- -- Logo -- -- -- -- */
 .ohmyfood {
@@ -119,21 +330,19 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
 }
 
 /* -- -- -- -- Location -- -- -- -- */
-.location {
+.search {
   display: flex;
   justify-content: center;
   padding: 15px 35px 15px 0;
   background-color: #ededed;
 }
-
-.location i {
+.search__iconMap {
   font-size: 1.1em;
   margin-top: 2px;
   margin-right: 17px;
 }
-
-.intro__searchText {
-  font-weight: bold;
+.search__textSearch {
+  font-weight: normal;
 }
 
 /* -- -- -- -- Titles -- -- -- -- */
@@ -141,13 +350,12 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #f7f7f7;
+  background-color: #F7F7F7;
 }
 .intro__title {
   font-size: 1.6em;
   padding: 35px 35px 12px;
 }
-
 .intro__subtitle {
   font-size: 1.1em;
   padding: 0 27px 0;
@@ -155,43 +363,51 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
 }
 
 /* -- -- -- -- Main -- -- -- -- */
-/* -- -- -- -- Fonctionnement -- -- -- -- */
-.fonction h2 {
-  font-size: 1.5em;
-  margin-top: 48px;
-  margin-left: 18px;
-  margin-bottom: 28px;
+main {
+  background-color: #F7F7F7;
 }
 
-.fonction ol {
+/* -- -- -- -- Fonctionnement -- -- -- -- */
+.fonction {
+  padding-bottom: 93px;
+  background-color: #fff;
+}
+.fonction h2 {
+  font-size: 1.5em;
+  padding-top: 48px;
+  padding-left: 18px;
+  padding-bottom: 28px;
+}
+
+.fonction ul {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding-left: 28px;
   padding-right: 18px;
+  gap: 28px;
 }
-.fonction ol li {
+.fonction ul li {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f7f7f7;
+  background-color: #F7F7F7;
   border-radius: 25px;
   box-shadow: 1px 2px 8px #cccccc;
-  margin: 0 0 28px;
   height: 70px;
   width: 100%;
   max-width: 340px;
   position: relative;
 }
-.fonction ol li:hover {
+.fonction ul li:hover {
   cursor: pointer;
   background: rgba(147, 86, 220, 0.1);
 }
-.fonction ol li:hover i {
+.fonction ul li:hover i {
   color: #9356DC;
   position: absolute;
-  left: 30px;
+  left: 35px;
 }
 
 .fonction__number {
@@ -216,59 +432,83 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
 .fonction i {
   color: #878787;
   position: absolute;
-  left: 30px;
+  left: 35px;
 }
 
-.fa-mobile-alt {
+.fonction__iconMobile {
   font-size: 1.2em;
 }
 
-.fa-list-ul {
+.fonction__iconList {
   font-size: 1.1em;
 }
 
-.fa-store {
+.fonction__iconStore {
   font-size: 1em;
 }
 
-/* -- -- -- -- Restaurants -- -- -- -- */
-.restos {
-  padding: 50px 20px 65px;
-  margin-top: 33px;
+/* -- -- -- -- Grid Restaurants -- -- -- -- */
+.restaurants__title {
+  grid-area: title;
 }
 
-.restos h2 {
+#cardR1 {
+  grid-area: cardR1;
+}
+
+#cardR2 {
+  grid-area: cardR2;
+}
+
+#cardR3 {
+  grid-area: cardR3;
+}
+
+#cardR4 {
+  grid-area: cardR4;
+}
+
+.restaurants {
+  display: grid;
+  grid-gap: 18px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "title" "cardR1" "cardR2" "cardR3" "cardR4";
+  background-color: #F7F7F7;
+}
+
+/* -- -- -- -- Restaurants -- -- -- -- */
+.restaurants {
+  padding: 50px 20px 65px;
+}
+.restaurants__title {
   font-size: 1.6em;
 }
 
-.restos a {
-  text-decoration: none;
-  color: #000;
-}
-
 .card {
-  background-color: #FFFFFF;
+  background-color: #FFF;
+  box-shadow: 1px 2px 8px #cccccc;
   width: 100%;
   height: 250px;
   border-radius: 15px;
   position: relative;
 }
-
-.card img {
+.card__link {
+  text-decoration: none;
+  color: #000;
+}
+.card__img {
   object-fit: cover;
   width: 100%;
   height: 100%;
   max-height: 175px;
   border-radius: 15px 15px 0 0;
 }
-
 .card__flex {
   height: 21%;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-
 .card__info {
   display: flex;
   flex-direction: column;
@@ -276,48 +516,46 @@ En d’autres termes, pages/ contient des règles spécifiques à une seule page
   padding-top: 12px;
   padding-left: 12px;
 }
-.card__info p {
-  padding-top: 5px;
+.card__title {
+  font-size: 1.1em;
+  padding-bottom: 5px;
 }
-
 .card__icon-heart {
-  font-size: 1.5em;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  padding-top: 20px;
+  padding-right: 25px;
   width: 22%;
-  padding-top: 10px;
+  font-size: 1.4em;
+  font-weight: lighter;
+  cursor: pointer;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: transparent;
+  transition-duration: 300ms;
+  transform: scale(1);
+}
+.card__icon-heart:hover {
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0;
+  transition-duration: 300ms;
+  transform: scale(1.1);
 }
 
 .card__new {
   font-size: 13px;
   font-weight: bold;
   top: 14px;
-  bottom: 50px;
   right: 11px;
+  bottom: 50px;
   background-color: #99E2D0;
-  color: #009973;
+  color: #278870;
   margin-bottom: 158px;
   padding-top: 6px;
   padding-right: 11px;
   padding-left: 11px;
   position: absolute;
-}
-
-/* -- -- -- -- Header -- -- -- -- */
-/* -- -- -- -- Logo -- -- -- -- */
-header {
-  display: flex;
-}
-
-.ohmyfood {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 12px;
-  padding-top: 25px;
-}
-.ohmyfood__logo {
-  width: 168px;
 }
 
 /* -- -- -- -- Main -- -- -- -- */
@@ -328,68 +566,136 @@ header {
 }
 
 /* -- -- -- -- Section -- -- -- -- */
-/* -- -- -- -- Menu -- -- -- -- */
-section {
+.section-menu {
   margin-top: -55px;
-  background-color: #f2f2f2;
+  padding-bottom: 1px;
+  background-color: #F7F7F7;
 }
 
-.page-title__name {
-  position: relative;
+/* -- -- -- -- Restaurant title and heart icon -- -- -- -- */
+.page-title {
   display: flex;
   justify-content: space-between;
-  background-color: blueviolet;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
+  padding-left: 15px;
   border-radius: 35px 35px 0 0;
-  background-color: #f2f2f2;
+  background-color: #F7F7F7;
+  position: relative;
 }
-
-.page-title__name h1 {
+.page-title h1 {
   font-size: 1.7em;
   font-family: "Shrikhand", cursive;
-  padding-left: 20px;
+}
+.page-title__heart-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  padding-right: 40px;
+}
+.page-title__icon-heart {
+  width: 30px;
+  font-size: 1.4em;
+  font-weight: lighter;
+  cursor: pointer;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: transparent;
+  transition-duration: 300ms;
+  transform: scale(1);
+}
+.page-title__icon-heart:hover {
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0;
+  transition-duration: 300ms;
+  transform: scale(1.1);
 }
 
-.page-title__name i {
-  font-size: 1.5em;
-  padding-right: 35px;
-}
-
+/* -- -- -- -- Starters, main courses and deserts -- -- -- -- */
 .menu {
   padding: 0 13px;
 }
-
+.menu h2 {
+  padding-top: 21px;
+  padding-bottom: 5px;
+  width: 40px;
+  border-bottom: 3px solid #99E2D0;
+  margin-bottom: 15px;
+}
 .menu__content {
   display: flex;
-  justify-content: space-between;
-  margin-top: 17px;
+  margin-bottom: 16px;
   background-color: #fff;
   border-radius: 15px;
+  box-shadow: 1px 2px 8px #cccccc;
   height: 68px;
   cursor: pointer;
+  overflow: hidden;
 }
-
+.menu__content:hover > .menu__check-box {
+  transition-duration: 400ms;
+  transform: translateX(0);
+}
+.menu__content:hover > .menu__check-box .menu__icon-container {
+  transition-duration: 400ms;
+  transform: rotate(0deg);
+}
+.menu__content:hover > .menu__price {
+  transition-duration: 400ms;
+  transform: translateX(0);
+}
 .menu__description {
   padding-top: 13px;
   padding-left: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-
-.menu__description h3 {
+.menu h3 {
   font-size: 1.1em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-
-.menu__description p {
+.menu__side-dish {
   font-size: 0.9em;
   padding-top: 2px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-
 .menu__price {
   display: flex;
   align-self: flex-end;
   font-weight: bold;
   padding-right: 23px;
   padding-bottom: 13px;
+  margin-left: auto;
+  transition-duration: 400ms;
+  transform: translateX(60px);
+}
+
+.menu__check-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 100%;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  transition-duration: 400ms;
+  transform: translateX(60px);
+}
+
+.menu__icon-container {
+  transition-duration: 400ms;
+  transform: rotate(-360deg);
+}
+
+.menu__icon-check {
+  color: #fff;
+  font-size: 1.2em;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,14 +1,28 @@
-/* -- components/ est utilisé pour ranger les blocs BEM qui sont plus indépendants, comme les boutons -- */
-
-.btn-purple{
+.btn__purple{
     display: flex;
+    justify-content: center;
     align-items: center;
-    border-radius: 25px;
-    background: linear-gradient($color-secondary, $color-primary);
-    margin: 35px auto 60px;
-    padding-left: 20px;
-    padding-right: 20px;
     height: 47px;
+    margin: 35px auto 60px;
+    padding-right: 20px;
+    padding-left: 20px;
     color: #fff;
+    border-style: none;
+    border-radius: 25px;
+    box-shadow: 1px 2px 8px #7d7d7d;
+    background: linear-gradient(170deg, $color-secondary, $color-primary);
     cursor: pointer;
+    transform: scale(1);
+    transition: transform 150ms, background-color 100ms 50ms;
+        &:hover{
+            transform: scale(1.03);
+            background: linear-gradient(rgba(255, 121, 218), rgba(147, 86, 220));
+            box-shadow: 1px 4px 10px #7d7d7d;
+            transition: transform 150ms;
+            opacity: 0.9;
+        }
+    }
+.btn__purple--order{
+    width: 190px;
+    margin-top: 45px;
 }

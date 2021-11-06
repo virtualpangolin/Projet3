@@ -1,0 +1,146 @@
+
+/* -- -- -- -- Media queries Grid restaurants -- -- -- -- */
+
+@media all and (max-width: 720px){
+    .section-restaurants .restaurants{
+        display: grid;
+        grid-gap: 18px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "cardR1"
+            "cardR2"
+            "cardR3"
+            "cardR4";
+
+        background-color: $color-background;
+    }
+}
+
+@media all and (min-width: 721px) and (max-width: 1024px){
+    .section-restaurants .restaurants{
+        display: grid;
+        grid-gap: 18px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "title title"
+            "cardR1 cardR2"
+            "cardR3 cardR4";
+        
+        background-color: $color-background;
+    }
+}
+
+@media all and (min-width: 1025px) and (max-width: 1300px){
+    .section-restaurants .restaurants{
+        display: grid;
+        grid-gap: 18px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "title title"
+            "cardR1 cardR2"
+            "cardR3 cardR4";
+        
+        background-color: $color-background;
+    }
+}
+
+@media all and (min-width: 1301px){
+    .section-restaurants .restaurants{
+        display: grid;
+        grid-gap: 18px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "title title title title"
+            "cardR1 cardR2 cardR3 cardR4";
+        
+        background-color: $color-background;
+    }
+}
+
+/* -- -- -- -- Media queries fonctionnement -- -- -- -- */
+
+@media all and (min-width: 1025px) and (max-width: 1300px){
+    .fonction{
+        max-width: 1024px;
+        margin: auto;
+    }
+    .fonction h2{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media all and (min-width: 1301px){
+    .fonction{
+        max-width: 1300px;
+        margin: auto;
+    }
+    .fonction h2{
+        display: flex;
+        justify-content: center;
+    }
+}
+/* -- -- -- -- Media queries header logo, text search -- -- -- -- */
+
+@media all and (min-width: 721px) and (max-width: 1024px){
+    .header{
+        display: flex;
+        justify-content: space-around;
+        max-width: 1024px;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+}
+
+/* -- -- -- -- Media queries header logo, text search -- -- -- -- */
+
+@media all and (min-width: 530px) and (max-width: 720px){
+    .footer{
+        display: flex;
+        justify-content: space-around;
+        max-width: 1024px;
+    }
+}
+
+@media all and (min-width: 721px){
+    .footer{
+        height: 200px;
+    }
+    .footer__title{
+        display: flex;
+        justify-content: center;
+        font-size: 2em;
+        padding-right: 25px;
+        padding-bottom: 25px;
+    }
+    .footer ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-right: 25px;
+    }
+}
+
+/* -- -- -- -- Media queries menu list -- -- -- -- */
+
+@media all and (min-width: 721px) and (max-width: 1600px){
+    .menu__starters{
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+    }
+    .menu__main-course{
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+    }
+    .menu__desserts{
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+    }
+    .menu__content{
+        width: calc(100% - 100px);
+    }
+}

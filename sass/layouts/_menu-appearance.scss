@@ -1,0 +1,20 @@
+.menu__content {
+    animation: menu__content 800ms 0.2ms;
+}
+
+@keyframes menu__content{
+    0% {
+        transform: translateY(100px) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@for $i from 1 to 10{
+    .anim-#{$i} {
+      animation-delay: #{$i/10}s;
+    }
+  }

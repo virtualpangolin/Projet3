@@ -1,2 +1,24 @@
-/* -- layouts/ est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable, 
-par exemple un header pour les mises en page de grande taille ou un footer -- */
+/* -- -- -- -- Header, logo, menu pages -- -- -- -- */
+
+.ohmyfood{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 12px;
+    position: relative;
+        &__logo{
+            width: 168px;
+        }
+        & i{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            color: #000;
+            position: absolute;
+            bottom: 20px;
+            left: 25px;
+        }
+    }
+    
