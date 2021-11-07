@@ -59,18 +59,6 @@
             margin: auto;
         }
     }
-    
-/* -- -- -- -- Media queries header logo, text search -- -- -- -- */
-
-@media all and (min-width: 721px) and (max-width: 1024px){
-    .header{
-        display: flex;
-        justify-content: space-around;
-        max-width: 1024px;
-        margin-right: 40px;
-        margin-left: 40px;
-    }
-}
 
 /* -- -- -- -- Media queries fonctionnement -- -- -- -- */
 
