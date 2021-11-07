@@ -33,7 +33,7 @@
             display: flex;
             justify-content: center;
             padding-top: 6px;
-            padding-right: 40px;
+            padding-right: 30px;
         }
         &__icon-heart{
             width: 30px;
@@ -95,6 +95,7 @@
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
+            flex: 1;
         }
         & h3{
             font-size: 1.1em;

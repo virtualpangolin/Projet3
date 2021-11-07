@@ -229,12 +229,8 @@ main{
     font-weight: bold;
     top: 14px;
     right: 11px;
-    bottom: 50px;
     background-color: $color-tertiary;
     @include text-new;
-    margin-bottom: 158px;
-    padding-top: 6px;
-    padding-right: 11px;
-    padding-left: 11px;
+    padding: 6px 11px;
     position: absolute;
 }

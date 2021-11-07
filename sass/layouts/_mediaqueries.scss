@@ -54,7 +54,21 @@
             "title title title title"
             "cardR1 cardR2 cardR3 cardR4";
         
-        background-color: $color-background;
+            background-color: $color-background;
+            max-width: 1500px;
+            margin: auto;
+        }
+    }
+    
+/* -- -- -- -- Media queries header logo, text search -- -- -- -- */
+
+@media all and (min-width: 721px) and (max-width: 1024px){
+    .header{
+        display: flex;
+        justify-content: space-around;
+        max-width: 1024px;
+        margin-right: 40px;
+        margin-left: 40px;
     }
 }
 
@@ -81,50 +95,14 @@
         justify-content: center;
     }
 }
-/* -- -- -- -- Media queries header logo, text search -- -- -- -- */
 
-@media all and (min-width: 721px) and (max-width: 1024px){
-    .header{
-        display: flex;
-        justify-content: space-around;
-        max-width: 1024px;
-        margin-right: 40px;
-        margin-left: 40px;
+/* -- -- -- -- Media queries Menu list -- -- -- -- */
+
+@media all and (min-width: 1024px){
+    .section-menu{
+        max-width: 1500px;
+        margin: auto;
     }
-}
-
-/* -- -- -- -- Media queries header logo, text search -- -- -- -- */
-
-@media all and (min-width: 530px) and (max-width: 720px){
-    .footer{
-        display: flex;
-        justify-content: space-around;
-        max-width: 1024px;
-    }
-}
-
-@media all and (min-width: 721px){
-    .footer{
-        height: 200px;
-    }
-    .footer__title{
-        display: flex;
-        justify-content: center;
-        font-size: 2em;
-        padding-right: 25px;
-        padding-bottom: 25px;
-    }
-    .footer ul{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        padding-right: 25px;
-    }
-}
-
-/* -- -- -- -- Media queries menu list -- -- -- -- */
-
-@media all and (min-width: 721px) and (max-width: 1600px){
     .menu__starters{
         display: flex;
         justify-content: space-between;
@@ -143,4 +121,27 @@
     .menu__content{
         width: calc(100% - 100px);
     }
+    
+/* -- -- -- -- Media queries Footer -- -- -- -- */
+
+@media all and (min-width: 721px){
+    .footer{
+        height: 200px;
+    }
+    .footer__title{
+        display: flex;
+        justify-content: center;
+        font-size: 2em;
+        padding-right: 25px;
+        padding-bottom: 25px;
+    }
+    .footer ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 1300px;
+        margin: auto;
+        padding-right: 25px;
+    }
+}
 }

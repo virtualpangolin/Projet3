@@ -180,6 +180,18 @@ ul {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "title title title title" "cardR1 cardR2 cardR3 cardR4";
     background-color: #F7F7F7;
+    max-width: 1500px;
+    margin: auto;
+  }
+}
+/* -- -- -- -- Media queries header logo, text search -- -- -- -- */
+@media all and (min-width: 721px) and (max-width: 1024px) {
+  .header {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1024px;
+    margin-right: 40px;
+    margin-left: 40px;
   }
 }
 /* -- -- -- -- Media queries fonctionnement -- -- -- -- */
@@ -205,46 +217,13 @@ ul {
     justify-content: center;
   }
 }
-/* -- -- -- -- Media queries header logo, text search -- -- -- -- */
-@media all and (min-width: 721px) and (max-width: 1024px) {
-  .header {
-    display: flex;
-    justify-content: space-around;
-    max-width: 1024px;
-    margin-right: 40px;
-    margin-left: 40px;
-  }
-}
-/* -- -- -- -- Media queries header logo, text search -- -- -- -- */
-@media all and (min-width: 530px) and (max-width: 720px) {
-  .footer {
-    display: flex;
-    justify-content: space-around;
-    max-width: 1024px;
-  }
-}
-@media all and (min-width: 721px) {
-  .footer {
-    height: 200px;
+/* -- -- -- -- Media queries Menu list -- -- -- -- */
+@media all and (min-width: 1024px) {
+  .section-menu {
+    max-width: 1500px;
+    margin: auto;
   }
 
-  .footer__title {
-    display: flex;
-    justify-content: center;
-    font-size: 2em;
-    padding-right: 25px;
-    padding-bottom: 25px;
-  }
-
-  .footer ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-right: 25px;
-  }
-}
-/* -- -- -- -- Media queries menu list -- -- -- -- */
-@media all and (min-width: 721px) and (max-width: 1600px) {
   .menu__starters {
     display: flex;
     justify-content: space-between;
@@ -266,9 +245,33 @@ ul {
   .menu__content {
     width: calc(100% - 100px);
   }
+
+  /* -- -- -- -- Media queries Footer -- -- -- -- */
+}
+@media all and (min-width: 1024px) and (min-width: 721px) {
+  .footer {
+    height: 200px;
+  }
+
+  .footer__title {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    padding-right: 25px;
+    padding-bottom: 25px;
+  }
+
+  .footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1300px;
+    margin: auto;
+    padding-right: 25px;
+  }
 }
 .menu__content {
-  animation: menu__content 800ms 0.2ms;
+  animation: menu__content 1s 0.2ms;
 }
 
 @keyframes menu__content {
@@ -548,13 +551,9 @@ main {
   font-weight: bold;
   top: 14px;
   right: 11px;
-  bottom: 50px;
   background-color: #99E2D0;
   color: #278870;
-  margin-bottom: 158px;
-  padding-top: 6px;
-  padding-right: 11px;
-  padding-left: 11px;
+  padding: 6px 11px;
   position: absolute;
 }
 
@@ -591,7 +590,7 @@ main {
   display: flex;
   justify-content: center;
   padding-top: 6px;
-  padding-right: 40px;
+  padding-right: 30px;
 }
 .page-title__icon-heart {
   width: 30px;
@@ -651,6 +650,7 @@ main {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  flex: 1;
 }
 .menu h3 {
   font-size: 1.1em;
