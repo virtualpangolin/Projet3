@@ -1,25 +1,46 @@
-/*.loader{
+.loader{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
+
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 1;
     width: 100%;
     height: 100%;
+    z-index: 1;
+    animation: loaded 3s forwards;
 }
 
-.loader::after {
-    content: "";
-    width: 150px;
-    height: 150px;
+@keyframes loaded {
+    0%{
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    80%{
+        opacity: 0.9;
+    }
+    99%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+
+.loader-spinner{
+    width: 75px;
+    height: 75px;
     border: 10px solid transparent;
     border-radius: 50%;
-    animation: loading 2s ease-in-out infinite alternate,
-    color 2s ease-in-out infinite alternate;
+    animation: loading 3s, color 3s;
+    
 }
 
 @keyframes loading {
@@ -32,7 +53,7 @@
 }
 
 @keyframes color{
-    100%, 0% {
+    0% {
         border-top-color: $color-primary;
     }
     25% {
@@ -44,4 +65,17 @@
     75% {
         border-top-color: $color-secondary;
     }
-}*/
+    100% {
+        border-top-color: $color-primary;
+    }
+}
+
+.loader-logo{
+    font-size: 2em;
+    width: auto;
+    font-family: 'Shrikhand', cursive;
+    background: -webkit-linear-gradient(360deg, $color-primary, $color-secondary, $color-tertiary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1;
+}

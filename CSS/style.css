@@ -98,53 +98,82 @@ ul {
   left: 25px;
 }
 
-/*.loader{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  animation: loaded 3s forwards;
 }
 
-.loader::after {
-    content: "";
-    width: 150px;
-    height: 150px;
-    border: 10px solid transparent;
-    border-radius: 50%;
-    animation: loading 2s ease-in-out infinite alternate,
-    color 2s ease-in-out infinite alternate;
+@keyframes loaded {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  99% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+.loader-spinner {
+  width: 75px;
+  height: 75px;
+  border: 10px solid transparent;
+  border-radius: 50%;
+  animation: loading 3s, color 3s;
 }
 
 @keyframes loading {
-    0%{
-        transform: rotate(-40deg);
-    }
-    100%{
-        transform: rotate(760deg);
-    }
+  0% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(760deg);
+  }
+}
+@keyframes color {
+  0% {
+    border-top-color: #9356DC;
+  }
+  25% {
+    border-top-color: #FF79DA;
+  }
+  50% {
+    border-top-color: #99E2D0;
+  }
+  75% {
+    border-top-color: #FF79DA;
+  }
+  100% {
+    border-top-color: #9356DC;
+  }
+}
+.loader-logo {
+  font-size: 2em;
+  width: auto;
+  font-family: "Shrikhand", cursive;
+  background: -webkit-linear-gradient(360deg, #9356DC, #FF79DA, #99E2D0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1;
 }
 
-@keyframes color{
-    100%, 0% {
-        border-top-color: $color-primary;
-    }
-    25% {
-        border-top-color: $color-secondary;
-    }
-    50% {
-        border-top-color: $color-tertiary;
-    }
-    75% {
-        border-top-color: $color-secondary;
-    }
-}*/
 /* -- -- -- -- Media queries Grid restaurants -- -- -- -- */
 @media all and (max-width: 720px) {
   .section-restaurants .restaurants {
@@ -207,38 +236,21 @@ ul {
     justify-content: center;
   }
 }
-/* -- -- -- -- Media queries Menu list -- -- -- -- */
-@media all and (min-width: 1024px) {
-  .section-menu {
-    max-width: 1500px;
+/* -- -- -- -- Media queries Title and menu list -- -- -- -- */
+@media all and (min-width: 1230px) {
+  .page-title {
+    max-width: 1230px;
     margin: auto;
   }
 
-  .menu__starters {
+  .menu {
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
+    justify-content: center;
+    gap: 30px;
   }
-
-  .menu__main-course {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-  }
-
-  .menu__desserts {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-  }
-
-  .menu__content {
-    width: calc(100% - 100px);
-  }
-
-  /* -- -- -- -- Media queries Footer -- -- -- -- */
 }
-@media all and (min-width: 1024px) and (min-width: 721px) {
+/* -- -- -- -- Media queries Footer -- -- -- -- */
+@media all and (min-width: 721px) {
   .footer {
     height: 200px;
   }
@@ -524,15 +536,15 @@ main {
   cursor: pointer;
   -webkit-text-stroke-width: 1px;
   -webkit-text-fill-color: transparent;
-  transition-duration: 300ms;
+  transition-duration: 1000ms;
   transform: scale(1);
 }
 .card__icon-heart:hover {
-  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  background: -webkit-linear-gradient(210deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 0;
-  transition-duration: 300ms;
+  transition-duration: 1000ms;
   transform: scale(1.1);
 }
 
@@ -593,7 +605,7 @@ main {
   transform: scale(1);
 }
 .page-title__icon-heart:hover {
-  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  background: -webkit-linear-gradient(210deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 0;
@@ -660,7 +672,7 @@ main {
   align-self: flex-end;
   font-weight: bold;
   padding-right: 23px;
-  padding-bottom: 13px;
+  padding-bottom: 14px;
   margin-left: auto;
   transition-duration: 400ms;
   transform: translateX(60px);

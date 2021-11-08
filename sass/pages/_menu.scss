@@ -45,7 +45,7 @@
             transition-duration: 300ms;
             transform: scale(1);
             &:hover{
-                background: -webkit-linear-gradient($color-secondary, $color-primary);
+                background: -webkit-linear-gradient(210deg, $color-primary, $color-secondary);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 -webkit-text-stroke-width: 0;
@@ -115,7 +115,7 @@
             align-self: flex-end;
             font-weight: bold;
             padding-right: 23px;
-            padding-bottom: 13px;
+            padding-bottom: 14px;
             margin-left: auto;
             transition-duration: 400ms;
             transform: translateX(60px);

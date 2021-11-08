@@ -211,14 +211,14 @@ main{
             cursor: pointer;
             -webkit-text-stroke-width: 1px;
             -webkit-text-fill-color: transparent;
-            transition-duration: 300ms;
+            transition-duration: 1000ms;
             transform: scale(1);
             &:hover{
-                background: -webkit-linear-gradient($color-secondary, $color-primary);
+                background: -webkit-linear-gradient(210deg, $color-primary, $color-secondary);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 -webkit-text-stroke-width: 0;
-                transition-duration: 300ms;
+                transition-duration: 1000ms;
                 transform: scale(1.1);
             }
         }

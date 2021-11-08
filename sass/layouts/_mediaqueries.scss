@@ -84,32 +84,20 @@
     }
 }
 
-/* -- -- -- -- Media queries Menu list -- -- -- -- */
+/* -- -- -- -- Media queries Title and menu list -- -- -- -- */
 
-@media all and (min-width: 1024px){
-    .section-menu{
-        max-width: 1500px;
+@media all and (min-width: 1230px){
+    .page-title{
+        max-width: 1230px;
         margin: auto;
     }
-    .menu__starters{
+    .menu{
         display: flex;
-        justify-content: space-between;
-        gap: 15px;
-    }
-    .menu__main-course{
-        display: flex;
-        justify-content: space-between;
-        gap: 15px;
-    }
-    .menu__desserts{
-        display: flex;
-        justify-content: space-between;
-        gap: 15px;
-    }
-    .menu__content{
-        width: calc(100% - 100px);
-    }
+        justify-content: center;
+        gap: 30px;
+        }
     
+    }
 /* -- -- -- -- Media queries Footer -- -- -- -- */
 
 @media all and (min-width: 721px){
@@ -131,5 +119,4 @@
         margin: auto;
         padding-right: 25px;
     }
-}
 }
