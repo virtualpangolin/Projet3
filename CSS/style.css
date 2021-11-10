@@ -38,7 +38,7 @@ ul {
 }
 .btn__purple:hover {
   transform: scale(1.03);
-  background: linear-gradient(#ff79da, #9356dc);
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
   box-shadow: 1px 4px 10px #7d7d7d;
   transition: transform 150ms;
   opacity: 0.9;
@@ -340,6 +340,7 @@ ul {
   justify-content: center;
   padding: 15px 35px 15px 0;
   background-color: #ededed;
+  box-shadow: inset 1px 7px 8px -5px #cccccc;
 }
 .search__iconMap {
   font-size: 1.1em;

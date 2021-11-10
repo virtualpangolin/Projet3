@@ -16,7 +16,7 @@
     transition: transform 150ms, background-color 100ms 50ms;
         &:hover{
             transform: scale(1.03);
-            background: linear-gradient(rgba(255, 121, 218), rgba(147, 86, 220));
+            background: linear-gradient(170deg, $color-secondary, $color-primary);
             box-shadow: 1px 4px 10px #7d7d7d;
             transition: transform 150ms;
             opacity: 0.9;
