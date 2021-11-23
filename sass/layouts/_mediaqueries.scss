@@ -1,6 +1,4 @@
-
-/* -- -- -- -- Media queries Grid restaurants -- -- -- -- */
-
+/* -- Media queries Grid restaurants -- */
 @media all and (max-width: 720px){
     .section-restaurants .restaurants{
         display: grid;
@@ -16,7 +14,6 @@
         background-color: $color-background;
     }
 }
-
 @media all and (min-width: 721px) and (max-width: 1024px){
     .section-restaurants .restaurants{
         display: grid;
@@ -30,7 +27,6 @@
         background-color: $color-background;
     }
 }
-
 @media all and (min-width: 1025px) and (max-width: 1300px){
     .section-restaurants .restaurants{
         display: grid;
@@ -44,7 +40,6 @@
         background-color: $color-background;
     }
 }
-
 @media all and (min-width: 1301px){
     .section-restaurants .restaurants{
         display: grid;
@@ -59,9 +54,7 @@
             margin: auto;
         }
     }
-
-/* -- -- -- -- Media queries fonctionnement -- -- -- -- */
-
+/* -- Media queries fonctionnement -- */
 @media all and (min-width: 1025px) and (max-width: 1300px){
     .fonction{
         max-width: 1024px;
@@ -83,9 +76,7 @@
         justify-content: center;
     }
 }
-
-/* -- -- -- -- Media queries Title and menu list -- -- -- -- */
-
+/* -- Media queries Title and menu list -- */
 @media all and (min-width: 1230px){
     .page-title{
         max-width: 1230px;
@@ -98,8 +89,7 @@
         }
     
     }
-/* -- -- -- -- Media queries Footer -- -- -- -- */
-
+/* -- Media queries Footer -- */
 @media all and (min-width: 721px){
     .footer{
         height: 200px;

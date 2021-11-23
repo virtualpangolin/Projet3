@@ -1,7 +1,3 @@
-@charset "UTF-8";
-/* -- le directory base/ contient les fichiers qui définissent les fondations de votre site,
- par exemple la police de caractères et les normes que vous voulez appliquer sur tout votre site, 
- telles que le box-sizing -- */
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
@@ -18,7 +14,6 @@ ul {
   list-style: none;
 }
 
-/* -- -- -- -- Wrapper -- -- -- -- */
 .btn__purple {
   display: flex;
   justify-content: center;
@@ -75,7 +70,7 @@ ul {
   padding-right: 11px;
 }
 
-/* -- -- -- -- Header, logo, menu pages -- -- -- -- */
+/* -- Header, logo, menu pages -- */
 .ohmyfood {
   display: flex;
   justify-content: center;
@@ -174,7 +169,7 @@ ul {
   -webkit-text-stroke-width: 1;
 }
 
-/* -- -- -- -- Media queries Grid restaurants -- -- -- -- */
+/* -- Media queries Grid restaurants -- */
 @media all and (max-width: 720px) {
   .section-restaurants .restaurants {
     display: grid;
@@ -213,7 +208,7 @@ ul {
     margin: auto;
   }
 }
-/* -- -- -- -- Media queries fonctionnement -- -- -- -- */
+/* -- Media queries fonctionnement -- */
 @media all and (min-width: 1025px) and (max-width: 1300px) {
   .fonction {
     max-width: 1024px;
@@ -236,7 +231,7 @@ ul {
     justify-content: center;
   }
 }
-/* -- -- -- -- Media queries Title and menu list -- -- -- -- */
+/* -- Media queries Title and menu list -- */
 @media all and (min-width: 1230px) {
   .page-title {
     max-width: 1230px;
@@ -249,7 +244,7 @@ ul {
     gap: 30px;
   }
 }
-/* -- -- -- -- Media queries Footer -- -- -- -- */
+/* -- Media queries Footer -- */
 @media all and (min-width: 721px) {
   .footer {
     height: 200px;
@@ -322,8 +317,8 @@ ul {
   animation-delay: 0.9s;
 }
 
-/* -- -- -- -- Header -- -- -- -- */
-/* -- -- -- -- Logo -- -- -- -- */
+/* -- Header -- */
+/* -- Logo -- */
 .ohmyfood {
   display: flex;
   justify-content: center;
@@ -334,7 +329,7 @@ ul {
   width: 168px;
 }
 
-/* -- -- -- -- Location -- -- -- -- */
+/* -- Location -- */
 .search {
   display: flex;
   justify-content: center;
@@ -351,7 +346,7 @@ ul {
   font-weight: normal;
 }
 
-/* -- -- -- -- Titles -- -- -- -- */
+/* -- Titles -- */
 .intro {
   display: flex;
   flex-direction: column;
@@ -368,12 +363,12 @@ ul {
   font-weight: normal;
 }
 
-/* -- -- -- -- Main -- -- -- -- */
+/* -- Main -- */
 main {
   background-color: #F7F7F7;
 }
 
-/* -- -- -- -- Fonctionnement -- -- -- -- */
+/* -- Fonctionnement -- */
 .fonction {
   padding-bottom: 93px;
   background-color: #fff;
@@ -409,6 +404,7 @@ main {
 .fonction ul li:hover {
   cursor: pointer;
   background: rgba(147, 86, 220, 0.1);
+  box-shadow: 2px 5px 8px #cccccc;
 }
 .fonction ul li:hover i {
   color: #9356DC;
@@ -453,7 +449,7 @@ main {
   font-size: 1em;
 }
 
-/* -- -- -- -- Grid Restaurants -- -- -- -- */
+/* -- Grid Restaurants -- */
 .restaurants__title {
   grid-area: title;
 }
@@ -482,7 +478,7 @@ main {
   background-color: #F7F7F7;
 }
 
-/* -- -- -- -- Restaurants -- -- -- -- */
+/* -- Restaurants -- */
 .restaurants {
   padding: 50px 20px 65px;
 }
@@ -560,21 +556,21 @@ main {
   position: absolute;
 }
 
-/* -- -- -- -- Main -- -- -- -- */
+/* -- Main -- */
 .welcome-img img {
   object-fit: cover;
   width: 100%;
   height: 250px;
 }
 
-/* -- -- -- -- Section -- -- -- -- */
+/* -- Section -- */
 .section-menu {
   margin-top: -55px;
   padding-bottom: 1px;
   background-color: #F7F7F7;
 }
 
-/* -- -- -- -- Restaurant title and heart icon -- -- -- -- */
+/* -- Restaurant title and heart icon -- */
 .page-title {
   display: flex;
   justify-content: space-between;
@@ -614,7 +610,7 @@ main {
   transform: scale(1.1);
 }
 
-/* -- -- -- -- Starters, main courses and deserts -- -- -- -- */
+/* -- Starters, main courses and deserts -- */
 .menu {
   padding: 0 13px;
 }

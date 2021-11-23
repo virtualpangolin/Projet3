@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     background-color: #fff;
-
     position: fixed;
     top: 0;
     left: 0;
@@ -15,7 +14,6 @@
     z-index: 1;
     animation: loaded 3s forwards;
 }
-
 @keyframes loaded {
     0%{
         transform: scale(1);
@@ -32,8 +30,6 @@
         opacity: 0;
     }
 }
-
-
 .loader-spinner{
     width: 75px;
     height: 75px;
@@ -42,7 +38,6 @@
     animation: loading 3s, color 3s;
     
 }
-
 @keyframes loading {
     0%{
         transform: rotate(-40deg);
@@ -51,7 +46,6 @@
         transform: rotate(760deg);
     }
 }
-
 @keyframes color{
     0% {
         border-top-color: $color-primary;
@@ -69,7 +63,6 @@
         border-top-color: $color-primary;
     }
 }
-
 .loader-logo{
     font-size: 2em;
     width: auto;

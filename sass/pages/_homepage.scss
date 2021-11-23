@@ -1,7 +1,5 @@
-/* -- -- -- -- Header -- -- -- -- */
-
-/* -- -- -- -- Logo -- -- -- -- */
-
+/* -- Header -- */
+/* -- Logo -- */
 .ohmyfood{
     display: flex;
     justify-content: center;
@@ -11,9 +9,7 @@
             width: 168px;
         }
     }
-
-/* -- -- -- -- Location -- -- -- -- */
-
+/* -- Location -- */
 .search{
     display: flex;
     justify-content: center;
@@ -29,9 +25,7 @@
             font-weight: normal;
         }
     }
-
-/* -- -- -- -- Titles -- -- -- -- */
-
+/* -- Titles -- */
 .intro{
     display: flex;
     flex-direction: column;
@@ -47,15 +41,11 @@
             font-weight: normal;
         }
     }
-
-/* -- -- -- -- Main -- -- -- -- */
-
+/* -- Main -- */
 main{
     background-color: $color-background;
 }
-
-/* -- -- -- -- Fonctionnement -- -- -- -- */
-
+/* -- Fonctionnement -- */
 .fonction{
     padding-bottom: 93px;
     background-color: #fff;
@@ -66,7 +56,6 @@ main{
             padding-bottom: 28px;
         }
     }
-
 .fonction ul{
     display: flex;
     flex-wrap: wrap;
@@ -89,6 +78,7 @@ main{
                 &:hover{
                     cursor: pointer;
                     background:rgba(147, 86, 220, 0.1);
+                    box-shadow: 2px 5px 8px $color-shadow;
                         i{
                             color: $color-primary;
                             position: absolute;
@@ -97,7 +87,6 @@ main{
                     }
                 }
             }
-
 .fonction__number{
     color: #fff;
     background-color: $color-primary;
@@ -111,38 +100,30 @@ main{
     position: absolute;
     left: -12px;
 }
-
 .fonction__text{
     font-weight: bold;
     position: relative;
 }
-
 .fonction i{
     color: #878787;
     position: absolute;
     left: 35px;
 }
-
 .fonction__iconMobile{
     font-size: 1.2em;
 }
-
 .fonction__iconList{
     font-size: 1.1em;
 }
-
 .fonction__iconStore{
     font-size: 1em;
 }
-
-/* -- -- -- -- Grid Restaurants -- -- -- -- */
-
+/* -- Grid Restaurants -- */
 .restaurants__title{grid-area: title;}
 #cardR1{grid-area: cardR1;}
 #cardR2{grid-area: cardR2;}
 #cardR3{grid-area: cardR3;}
 #cardR4{grid-area: cardR4;}
-
 .restaurants{
   display: grid;
   grid-gap: 18px;
@@ -153,19 +134,15 @@ main{
     "cardR2"
     "cardR3"
     "cardR4";
-
   background-color: $color-background;
 }
-
-/* -- -- -- -- Restaurants -- -- -- -- */
-
+/* -- Restaurants -- */
 .restaurants{
     padding: 50px 20px 65px;
         &__title{
             font-size: 1.6em;
         }
     }
-
 .card{
     background-color: #FFF;
     box-shadow: 1px 2px 8px $color-shadow;
@@ -224,7 +201,6 @@ main{
             }
         }
     }
-
 .card__new{
     font-size: 13px;
     font-weight: bold;
