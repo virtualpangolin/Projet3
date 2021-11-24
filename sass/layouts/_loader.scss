@@ -1,8 +1,6 @@
 .loader{
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: #fff;
     position: fixed;
     top: 0;

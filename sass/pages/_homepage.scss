@@ -57,17 +57,13 @@ main{
         }
     }
 .fonction ul{
-    display: flex;
+    @include flex-center;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     padding-left: 28px;
     padding-right: 18px;
     gap: 28px;
         & li{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex-center;
             background-color: $color-background;
             border-radius: 25px;
             box-shadow: 1px 2px 8px $color-shadow;
@@ -90,9 +86,7 @@ main{
 .fonction__number{
     color: #fff;
     background-color: $color-primary;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     height: 23px;
     width: 23px;
     font-size: 0.8em;
@@ -189,14 +183,14 @@ main{
             cursor: pointer;
             -webkit-text-stroke-width: 1px;
             -webkit-text-fill-color: transparent;
-            transition-duration: 1000ms;
+            transition-duration: 300ms;
             transform: scale(1);
             &:hover{
                 background: -webkit-linear-gradient(210deg, $color-primary, $color-secondary);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 -webkit-text-stroke-width: 0;
-                transition-duration: 1000ms;
+                transition-duration: 300ms;
                 transform: scale(1.1);
             }
         }
@@ -204,10 +198,10 @@ main{
 .card__new{
     font-size: 13px;
     font-weight: bold;
+    position: absolute;
     top: 14px;
     right: 11px;
     background-color: $color-tertiary;
     @include text-new;
     padding: 6px 11px;
-    position: absolute;
 }

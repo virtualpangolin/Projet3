@@ -95,9 +95,9 @@ ul {
 
 .loader {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: #fff;
   position: fixed;
   top: 0;
@@ -382,9 +382,9 @@ main {
 
 .fonction ul {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   padding-left: 28px;
   padding-right: 18px;
   gap: 28px;
@@ -533,7 +533,7 @@ main {
   cursor: pointer;
   -webkit-text-stroke-width: 1px;
   -webkit-text-fill-color: transparent;
-  transition-duration: 1000ms;
+  transition-duration: 300ms;
   transform: scale(1);
 }
 .card__icon-heart:hover {
@@ -541,19 +541,19 @@ main {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 0;
-  transition-duration: 1000ms;
+  transition-duration: 300ms;
   transform: scale(1.1);
 }
 
 .card__new {
   font-size: 13px;
   font-weight: bold;
+  position: absolute;
   top: 14px;
   right: 11px;
   background-color: #99E2D0;
   color: #278870;
   padding: 6px 11px;
-  position: absolute;
 }
 
 /* -- Main -- */

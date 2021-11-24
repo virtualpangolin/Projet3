@@ -84,23 +84,17 @@
         &__description{
             padding-top: 13px;
             padding-left: 10px;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
+            @include ellipsis;
             flex: 1;
         }
         & h3{
             font-size: 1.1em;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
+            @include ellipsis;
         }
         &__side-dish{
             font-size: 0.9em;
             padding-top: 2px;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
+            @include ellipsis;
         }
         &__price{
             display: flex;
@@ -114,9 +108,7 @@
         }
     }
 .menu__check-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     width: 60px;
     height: 100%;
     background-color: $color-tertiary;

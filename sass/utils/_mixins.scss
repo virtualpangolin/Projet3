@@ -1,3 +1,15 @@
 @mixin text-new ($color: $color-tertiary){
     color: darken($color, 40%);
 }
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
